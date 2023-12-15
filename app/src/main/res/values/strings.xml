@@ -31,6 +31,7 @@
     <string name="jugador_incorrecto">Jugador Incorrecto!</string>
     <string name="InfoPartido">Información Del Partido</string>
 
+
     //matchinfo - ligaespanola1Fragment
     <string name="InfoLigaEspanola1">Barcelona le ganó al Real Madrid por 4 a 3</string>
     <string name="InfoLigaEspanola2">La victoria fue de visitante</string>
@@ -42,6 +43,21 @@
     <string name="infogallery2">La victoria le dió el titulo</string>
     <string name="infogallery3">14 de diciembre del 2014</string>
     <string name="infogallery4">Estadio Presidente Perón</string>
+    //fragment2 - galleryFragment
+    <string name="infogallery5">River le ganó a Boca 3 a 1</string>
+    <string name="infogallery6">La victoria le dió el título a River</string>
+    <string name="infogallery7">9 de Diciembre del 2018</string>
+    <string name="infogallery8">Estadio Santiago Bernabeu</string>
+    //fragment3 - galleryFragment
+    <string name="infogallery9">Boca le ganó a Gremio por 3 a 0</string>
+    <string name="infogallery10">Partido de ida de la final de la Libertadores 2007</string>
+    <string name="infogallery11">13 de Junio del 2007</string>
+    <string name="infogallery12">Estadio La Bombonera</string>
+    //fragment4 - galleryFragment
+    <string name="infogallery13">San Lorenzo empató 1 a 1 con Nacional</string>
+    <string name="infogallery14">Partido de ida Libertadores 2014</string>
+    <string name="infogallery15">6 de Agosto del 2014</string>
+    <string name="infogallery16">Estadio Defensores de Chaco, Asunción</string>
 
     //matchinfo - slideshowFragment
     <string name="infoslideshow1">Manchester City Ganó 3 a 2 a QPR</string>

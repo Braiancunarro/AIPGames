@@ -29,10 +29,26 @@
     <fragment
         android:id="@+id/ligaespanola1"
         android:name="com.aristidevs.aipgames.ui.ligaespañola.ligaespanola1"
-        android:label="fragment_ligaespanola1"
+        android:label="@string/ligaEspañola"
         tools:layout="@layout/fragment_ligaespanola1" />
     <fragment
         android:id="@+id/galleryFragment2"
         android:name="com.aristidevs.aipgames.ui.gallery.GalleryFragment2"
-        android:label="GalleryFragment2" />
+        android:label="@string/LigaArg" >
+        <action
+            android:id="@+id/action_galleryFragment2_to_galleryFragment3"
+            app:destination="@id/galleryFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment3"
+        android:name="com.aristidevs.aipgames.ui.gallery.GalleryFragment3"
+        android:label="@string/LigaArg" >
+        <action
+            android:id="@+id/action_galleryFragment3_to_galleryFragment4"
+            app:destination="@id/galleryFragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment4"
+        android:name="com.aristidevs.aipgames.ui.gallery.GalleryFragment4"
+        android:label="GalleryFragment4" />
 </navigation>

@@ -115,12 +115,26 @@
             android:id="@+id/llmf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="60dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lldf">
 
+            <ImageView
+                android:id="@+id/ivN8"
+                style="@style/ImageViewPrincipal" />
+
+            <ImageView
+                android:id="@+id/ivN8v"
+                style="@style/ImageViewCheck" />
+            <ImageView
+                android:id="@+id/ivN11"
+                style="@style/ImageViewPrincipal" />
+
+            <ImageView
+                android:id="@+id/ivN11v"
+                style="@style/ImageViewCheck" />
 
             <ImageView
                 android:id="@+id/ivN5"
@@ -149,28 +163,7 @@
             <ImageView
                 android:id="@+id/ivN10v"
                 style="@style/ImageViewCheck" />
-            <ImageView
-                android:id="@+id/ivN8"
-                style="@style/ImageViewPrincipal" />
 
-            <ImageView
-                android:id="@+id/ivN8v"
-                style="@style/ImageViewCheck" />
-            <ImageView
-                android:id="@+id/ivN11"
-                style="@style/ImageViewPrincipal" />
-
-            <ImageView
-                android:id="@+id/ivN11v"
-                style="@style/ImageViewCheck" />
-
-            <ImageView
-                android:id="@+id/ivN7"
-                style="@style/ImageViewPrincipal" />
-
-            <ImageView
-                android:id="@+id/ivN7v"
-                style="@style/ImageViewCheck" />
         </LinearLayout>
 
         <LinearLayout
@@ -183,7 +176,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/llmf">
 
+            <ImageView
+                android:id="@+id/ivN7"
+                style="@style/ImageViewPrincipal" />
 
+            <ImageView
+                android:id="@+id/ivN7v"
+                style="@style/ImageViewCheck" />
 
             <ImageView
                 android:id="@+id/ivN9"
