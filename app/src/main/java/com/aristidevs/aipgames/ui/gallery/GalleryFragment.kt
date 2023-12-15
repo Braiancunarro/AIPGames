@@ -2,6 +2,7 @@ package com.aristidevs.aipgames.ui.gallery
 
 import android.annotation.SuppressLint
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -13,6 +14,7 @@ import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.aristidevs.aipgames.R
 import com.aristidevs.aipgames.databinding.FragmentGalleryBinding
 import com.aristidevs.aipgames.databinding.JugadorCorrectoBinding
@@ -44,10 +46,16 @@ class GalleryFragment : Fragment() {
 
         buttonInfo()
         jugador()
+        buttonNext()
         val root: View = binding.root
         return root
     }
 
+    fun buttonNext(){
+        binding.buttonNext.setOnClickListener{
+         findNavController().navigate(R.id.action_nav_gallery_to_galleryFragment2)
+        }
+    }
     fun buttonInfo() {
 
         binding.buttonInfo.setOnClickListener {

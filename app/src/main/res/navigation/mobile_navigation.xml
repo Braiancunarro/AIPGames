@@ -15,7 +15,11 @@
         android:id="@+id/nav_gallery"
         android:name="com.aristidevs.aipgames.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_nav_gallery_to_galleryFragment2"
+            app:destination="@id/galleryFragment2" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_slideshow"
@@ -27,4 +31,8 @@
         android:name="com.aristidevs.aipgames.ui.ligaespañola.ligaespanola1"
         android:label="fragment_ligaespanola1"
         tools:layout="@layout/fragment_ligaespanola1" />
+    <fragment
+        android:id="@+id/galleryFragment2"
+        android:name="com.aristidevs.aipgames.ui.gallery.GalleryFragment2"
+        android:label="GalleryFragment2" />
 </navigation>
