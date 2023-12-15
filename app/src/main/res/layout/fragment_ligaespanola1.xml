@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.aristidevs.aipgames.ui.gallery.GalleryViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:background="@drawable/canchafutbolfondo"
+        tools:context=".ui.gallery.GalleryFragment">
+
+
+        <LinearLayout
+            android:id="@+id/llgk"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+            <!--                android:id="@+id/buttonBack"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_margin="16dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:backgroundTint="@color/yellow2"-->
+            <!--                android:src="@drawable/back" />-->
+
+            <ImageView
+                android:id="@+id/ivArquero"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_weight="0"
+                android:src="@mipmap/shirt_icon_1"
+                android:visibility="visible"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <ImageView
+                android:id="@+id/ivCheck1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_weight="0"
+                android:src="@mipmap/camisetacheckkok"
+                android:visibility="gone" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/buttonNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/yellow2"
+                android:src="@drawable/next" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lldf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llgk">
+
+            <ImageView
+                android:id="@+id/ivN4"
+                style="@style/ImageViewPrincipal"/>
+
+            <ImageView
+                android:id="@+id/ivN4v"
+                style="@style/ImageViewCheck" />
+
+            <ImageView
+                android:id="@+id/ivN2"
+                style="@style/ImageViewPrincipal" />
+
+            <ImageView
+                android:id="@+id/ivN2v"
+                style="@style/ImageViewCheck" />
+
+            <ImageView
+                android:id="@+id/ivN6"
+                style="@style/ImageViewPrincipal"/>
+
+            <ImageView
+                android:id="@+id/ivN6v"
+                style="@style/ImageViewCheck" />
+
+            <ImageView
+                android:id="@+id/ivN3"
+                style="@style/ImageViewPrincipal"/>
+
+            <ImageView
+                android:id="@+id/ivN3v"
+                style="@style/ImageViewCheck"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llmf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lldf">
+
+            <ImageView
+                android:id="@+id/ivN10"
+                style="@style/ImageViewPrincipal" />
+
+            <ImageView
+                android:id="@+id/ivN10v"
+                style="@style/ImageViewCheck" />
+
+            <ImageView
+                android:id="@+id/ivN8"
+                style="@style/ImageViewPrincipal" />
+
+            <ImageView
+                android:id="@+id/ivN8v"
+                style="@style/ImageViewCheck" />
+
+            <ImageView
+                android:id="@+id/ivN5"
+                style="@style/ImageViewPrincipal" />
+
+            <ImageView
+                android:id="@+id/ivN5v"
+                style="@style/ImageViewCheck" />
+
+            <ImageView
+                android:id="@+id/ivN11"
+                style="@style/ImageViewPrincipal" />
+
+            <ImageView
+                android:id="@+id/ivN11v"
+                style="@style/ImageViewCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llkf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llmf">
+
+            <ImageView
+                android:id="@+id/ivN7"
+                style="@style/ImageViewPrincipal" />
+
+            <ImageView
+                android:id="@+id/ivN7v"
+                style="@style/ImageViewCheck"/>
+
+            <ImageView
+                android:id="@+id/ivN9"
+                style="@style/ImageViewPrincipal"/>
+
+            <ImageView
+                android:id="@+id/ivN9v"
+                style="@style/ImageViewCheck" />
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/buttonInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow2"
+            android:src="@drawable/info_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

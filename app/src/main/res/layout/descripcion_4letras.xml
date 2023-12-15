@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.aristidevs.aipgames.ui.gallery.GalleryViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/lloDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/side_nav_bar"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/rubik"
+            android:gravity="center"
+            android:text="@string/cuatro_letras"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <EditText
+                android:id="@+id/letra1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:inputType="textCapCharacters"
+                android:maxLength="1"
+                android:textSize="40sp" />
+
+            <EditText
+                android:id="@+id/letra2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:inputType="textCapCharacters"
+                android:maxLength="1"
+                android:textSize="40sp" />
+
+            <EditText
+                android:id="@+id/letra3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:inputType="textCapCharacters"
+                android:maxLength="1"
+                android:textSize="40sp" />
+
+            <EditText
+                android:id="@+id/letra4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:inputType="textCapCharacters"
+                android:maxLength="1"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/verificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/yellow"
+            android:text="@string/verificar"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</layout>

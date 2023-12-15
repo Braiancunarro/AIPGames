@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">AdivinaEquipo</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    //menu
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Liga Argentina</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="LigaArgentina">Liga Argentina</string>
+    <string name="Premier">Premier League</string>
+    <string name="SerieA">Serie A</string>
+    <string name="ligaEspañola">Liga Española</string>
+    <string name="FranceLigue">Ligue 1</string>
+    <string name="International">Internacional</string>
+
+    //descripciones
+    <string name="tres_letras">EL JUGADOR CONTIENE 3 LETRAS</string>
+    <string name="cuatro_letras">EL JUGADOR CONTIENE 4 LETRAS</string>
+    <string name="cinco_letras">EL JUGADOR CONTIENE 5 LETRAS</string>
+    <string name="seis_letras">EL JUGADOR CONTIENE 6 LETRAS</string>
+    <string name="siete_letras">EL JUGADOR CONTIENE 7 LETRAS</string>
+    <string name="cocho_letras">EL JUGADOR CONTIENE 8 LETRAS</string>
+    <string name="nueve_letras">EL JUGADOR CONTIENE 9 LETRAS</string>
+    <string name="diez_letras">EL JUGADOR CONTIENE 10 LETRAS</string>
+    <string name="verificar">VERIFICAR</string>
+    <string name="jugador_correcto">Jugador Correcto!</string>
+    <string name="jugador_incorrecto">Jugador Incorrecto!</string>
+    <string name="InfoPartido">Información Del Partido</string>
+
+    //matchinfo - galleryFragment
+    <string name="infogallery1">Racing le ganó 1 a 0 a Godoy Cruz</string>
+    <string name="infogallery2">La victoria le dió el titulo</string>
+    <string name="infogallery3">14 de diciembre del 2014</string>
+    <string name="infogallery4">Estadio Presidente Perón</string>
+
+    //matchinfo - slideshowFragment
+    <string name="infoslideshow1">Manchester City Ganó 3 a 2 a QPR</string>
+    <string name="infoslideshow2">La victoria le dió el titulo</string>
+    <string name="infoslideshow3">13 de Mayo del 2012</string>
+    <string name="infoslideshow4">Etihad Stadium</string>
+
+    //general
+    <string name="AIPGame">AIPGame</string>
+    <string name="slogan">Pon a prueba tu destreza Futbolistica!</string>
+    <string name="volver">VOLVER</string>
+
+    //homefragment
+    <string name="Inicio">Inicio</string>
+    <string name="homefragment1">Bienvenido a la App!</string>
+    <string name="homefragment2">Aqui pondrás poner a prueba tus conocimientos</string>
+    <string name="homefragment3">En la barra lateral podrás elegir entre las ligas mas importantes, en ellas encontrarás la formación del equipo y los
+        jugadores en su posición. Tendras que adivinar los nombres de los mismos, completando el total
+    de la plantilla para ganar!</string>
+    <string name="homefragment4">Pon a prueba tu capacidad futbolística</string>
+    <string name="homefragment5">Buena Suerte!</string>
+
+    //GalleryFragment
+    <string name="LigaArg">Liga Argentina</string>
+
+    //SlideShowFragment
+    <string name="LigaIng">Premier League</string>
+
+</resources>

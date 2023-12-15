@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.aristidevs.aipgames.ui.gallery.GalleryViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/JugadorIncorrecto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cornes_redondos"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
+            android:text="@string/jugador_incorrecto"
+            android:textColor="@color/red"
+            android:textSize="38sp" />
+    </LinearLayout>
+
+
+</layout>
