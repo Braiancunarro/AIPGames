@@ -16,6 +16,56 @@
     <string name="ligaEspañola">Liga Española</string>
     <string name="FranceLigue">Ligue 1</string>
     <string name="International">Internacional</string>
+    //clubes
+    <string name="boca">Boca</string>
+    <string name="river">River</string>
+    <string name="racing">Racing</string>
+    <string name="sanlorenzo">San Lorenzo</string>
+    <string name="independiente">Independiente</string>
+    <string name="estudiantes">Estudiantes</string>
+    <string name="huracan">Huracan</string>
+    <string name="banfield">Banfield</string>
+    <string name="velez">Velez</string>
+    <string name="lanus">Lanus</string>
+
+    <string name="city">Manchester City</string>
+    <string name="united">Manchester United</string>
+    <string name="liverpool">Liverpool</string>
+    <string name="arsenal">Arsenal</string>
+    <string name="chelsea">Chelsea</string>
+    <string name="everton">Everton</string>
+    <string name="tottenham">Tottenham</string>
+    <string name="westham">West Ham</string>
+    <string name="leicester">Leicester</string>
+    <string name="astonvila">Aston Villa</string>
+
+    <string name="barca">Barcelona</string>
+    <string name="real">Real Madrid</string>
+    <string name="aleti">Atletico de Madrid</string>
+    <string name="sevilla">Sevilla</string>
+    <string name="valencia">Valencia</string>
+    <string name="villareal">Villareal</string>
+    <string name="zaragoza">Zaragoza</string>
+    <string name="coruña">Deportivo La Coruña</string>
+    <string name="athletic">Athletic Club</string>
+    <string name="betis">Real Betis</string>
+
+    <string name="inter">Inter de Milán</string>
+    <string name="milan">Milan</string>
+    <string name="roma">Roma</string>
+    <string name="napoli">Napoli</string>
+    <string name="juventus">Juventus</string>
+    <string name="Lazio">Lazio</string>
+    <string name="udinense">Udinense</string>
+    <string name="catania">Calcio Catania</string>
+    <string name="Fiorentina">Fiorentina</string>
+    <string name="atalanta">Atalanta</string>
+
+
+
+
+
+
 
     //descripciones
     <string name="tres_letras">EL JUGADOR CONTIENE 3 LETRAS</string>
@@ -26,6 +76,8 @@
     <string name="cocho_letras">EL JUGADOR CONTIENE 8 LETRAS</string>
     <string name="nueve_letras">EL JUGADOR CONTIENE 9 LETRAS</string>
     <string name="diez_letras">EL JUGADOR CONTIENE 10 LETRAS</string>
+    <string name="catorce_letras">EL JUGADOR CONTIENE 14 LETRAS</string>
+    <string name="diecisiete_letras">EL JUGADOR CONTIENE 17 LETRAS</string>
     <string name="verificar">VERIFICAR</string>
     <string name="jugador_correcto">Jugador Correcto!</string>
     <string name="jugador_incorrecto">Jugador Incorrecto!</string>
@@ -58,6 +110,11 @@
     <string name="infogallery14">Partido de ida Libertadores 2014</string>
     <string name="infogallery15">6 de Agosto del 2014</string>
     <string name="infogallery16">Estadio Defensores de Chaco, Asunción</string>
+    //fragment5 - galleryFragment
+    <string name="infogallery17">Independiente le ganó 2 a 1 a Flamengo </string>
+    <string name="infogallery18">Partido de ida Sudamericana 2017</string>
+    <string name="infogallery19">6 de Diciembre Del 2017</string>
+    <string name="infogallery20">Estadio Libertadores De América</string>
 
     //matchinfo - slideshowFragment
     <string name="infoslideshow1">Manchester City Ganó 3 a 2 a QPR</string>

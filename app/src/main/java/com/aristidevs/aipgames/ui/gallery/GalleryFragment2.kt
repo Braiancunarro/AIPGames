@@ -5,6 +5,7 @@ package com.aristidevs.aipgames.ui.gallery
 import android.app.Dialog
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -131,6 +132,7 @@ class GalleryFragment2 : Fragment() {
     }
     fun buttonNext(){
         binding.buttonNext.setOnClickListener {
+            Log.d("GalleryFragment2", "Button Next Clicked")
             findNavController().navigate(R.id.action_galleryFragment2_to_galleryFragment3)
         }
     }

@@ -55,3 +55,17 @@ data class JugadoresFragment4(
     val romagnoli:String,
     val matos:String
 )
+
+data class JugadoresFragment5(
+    val campaña:String,
+    val bustos:String,
+    val franco:String,
+    val silva:String,
+    val tagliafico:String,
+    val rodriguez:String,
+    val sanchezmino:String,
+    val meza:String,
+    val barco:String,
+    val benitez:String,
+    val gigliotti:String
+)

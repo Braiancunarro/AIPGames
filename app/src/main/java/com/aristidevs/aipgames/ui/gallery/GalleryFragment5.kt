@@ -1,10 +1,8 @@
 package com.aristidevs.aipgames.ui.gallery
 
 import android.app.Dialog
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.view.Gravity
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,16 +10,17 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.aristidevs.aipgames.R
-import com.aristidevs.aipgames.databinding.FragmentGalleryFragment4Binding
+import com.aristidevs.aipgames.databinding.FragmentGalleryFragment5Binding
 import com.aristidevs.aipgames.databinding.JugadorCorrectoBinding
 import com.aristidevs.aipgames.databinding.JugadorIncorrectoBinding
 
-class GalleryFragment4 : Fragment() {
-
-    private var _binding : FragmentGalleryFragment4Binding? = null
-    private val binding get () = _binding!!
+class GalleryFragment5 : Fragment() {
+    private var _binding: FragmentGalleryFragment5Binding? = null
+    private val binding get() = _binding!!
 
     private var _binding2: JugadorCorrectoBinding? = null
     private val binding2 get() = _binding2!!
@@ -29,37 +28,30 @@ class GalleryFragment4 : Fragment() {
     private var _binding3: JugadorIncorrectoBinding? = null
     private val binding3 get() = _binding3!!
 
-    private lateinit var galleryfragment4: GalleryFragment4
+    private lateinit var galleryfragment5: GalleryFragment5
 
     companion object {
-        fun newInstance() = GalleryFragment4()
+        fun newInstance() = GalleryFragment5()
     }
 
-    private lateinit var viewModel: GalleryFragment4ViewModel
+    private lateinit var viewModel: GalleryFragment5ViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        viewModel = ViewModelProvider(this).get(GalleryFragment4ViewModel::class.java)
+    ): View? {
+        viewModel = ViewModelProvider(this).get(GalleryFragment5ViewModel::class.java)
 
-        _binding = FragmentGalleryFragment4Binding.inflate(inflater, container, false)
+        _binding = FragmentGalleryFragment5Binding.inflate(inflater, container, false)
         _binding2 = JugadorCorrectoBinding.inflate(inflater, container, false)
         _binding3 = JugadorIncorrectoBinding.inflate(inflater, container, false)
 
         buttonInfo()
         buttonback()
         jugador()
-        buttonNext()
 
         val root: View = binding.root
         return root
-    }
-
-    private fun buttonNext() {
-        binding.buttonNext.setOnClickListener {
-            findNavController().navigate(R.id.action_galleryFragment4_to_galleryFragment5)
-        }
     }
 
     fun buttonInfo() {
@@ -74,10 +66,10 @@ class GalleryFragment4 : Fragment() {
             val tv4 = customView.findViewById<TextView>(R.id.tv4)
 
 
-            tv1.text = getString(R.string.infogallery13)
-            tv2.text = getString(R.string.infogallery14)
-            tv3.text = getString(R.string.infogallery15)
-            tv4.text = getString(R.string.infogallery16)
+            tv1.text = getString(R.string.infogallery17)
+            tv2.text = getString(R.string.infogallery18)
+            tv3.text = getString(R.string.infogallery19)
+            tv4.text = getString(R.string.infogallery20)
 
             val dialog = Dialog(requireContext())
             dialog.setContentView(customView)
@@ -98,6 +90,7 @@ class GalleryFragment4 : Fragment() {
             dialog.show()
         }
     }
+
     fun vistaJugadorIncorrecto() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.jugador_incorrecto, null)
@@ -116,6 +109,7 @@ class GalleryFragment4 : Fragment() {
         window?.setGravity(Gravity.CENTER)
         dialog.show()
     }
+
     fun vistaJugadorCorrecto() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.jugador_correcto, null)
@@ -135,26 +129,29 @@ class GalleryFragment4 : Fragment() {
         dialog.show()
 
     }
+
     private fun buttonback() {
         binding.buttonBack.setOnClickListener {
-            findNavController().navigate(R.id.action_galleryFragment4_to_galleryFragment3)
+            findNavController().navigate(R.id.action_galleryFragment5_to_galleryFragment4)
         }
     }
 
-    fun jugador(){
-        binding.ivArquero.setOnClickListener { torrico() }
-        binding.ivN4.setOnClickListener { buffarini() }
-        binding.ivN2.setOnClickListener { fontanini() }
-        binding.ivN6.setOnClickListener { gentiletti() }
-        binding.ivN3.setOnClickListener { mas() }
-        binding.ivN8.setOnClickListener { villalba() }
-        binding.ivN11.setOnClickListener { mercier() }
-        binding.ivN5.setOnClickListener { ortigoza() }
-        binding.ivN7.setOnClickListener { piatti() }
-        binding.ivN10.setOnClickListener { romagnoli() }
-        binding.ivN9.setOnClickListener {matos()}
+    fun jugador() {
+        binding.ivArquero.setOnClickListener { campana() }
+        binding.ivN4.setOnClickListener { bustos() }
+        binding.ivN2.setOnClickListener { franco() }
+        binding.ivN6.setOnClickListener { silva() }
+        binding.ivN3.setOnClickListener { tagliafico() }
+        binding.ivN8.setOnClickListener { rodriguez() }
+        binding.ivN11.setOnClickListener { meza() }
+        binding.ivN5.setOnClickListener { sanchezmino() }
+        binding.ivN7.setOnClickListener { benitez() }
+        binding.ivN10.setOnClickListener { barco() }
+        binding.ivN9.setOnClickListener { gigliotti() }
     }
-    fun torrico(){ val inflater = LayoutInflater.from(binding.root.context)
+
+    fun campana() {
+        val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.descripcion_7letras, null)
 
         val parent = customView.parent as? ViewGroup
@@ -182,9 +179,7 @@ class GalleryFragment4 : Fragment() {
             val f = customView.findViewById<EditText>(R.id.letra6).text.toString()
             val g = customView.findViewById<EditText>(R.id.letra7).text.toString()
 
-
-
-            if (viewModel.Torrico(a,b,c,d,e,f,g)) {
+            if (viewModel.Campana(a, b, c, d, e, f, g)) {
                 vistaJugadorCorrecto()
                 binding.ivArquero.isVisible = false
                 binding.ivCheck1.isVisible = true
@@ -192,10 +187,12 @@ class GalleryFragment4 : Fragment() {
             } else {
                 vistaJugadorIncorrecto()
             }
-        }}
-    fun buffarini(){
+        }
+    }
+
+    fun bustos() {
         val inflater = LayoutInflater.from(binding.root.context)
-        val customView = inflater.inflate(R.layout.descripcion_9letras, null)
+        val customView = inflater.inflate(R.layout.descripcion_6letras, null)
 
         val parent = customView.parent as? ViewGroup
         parent?.removeView(customView)
@@ -220,12 +217,8 @@ class GalleryFragment4 : Fragment() {
             val d = customView.findViewById<EditText>(R.id.letra4).text.toString()
             val e = customView.findViewById<EditText>(R.id.letra5).text.toString()
             val f = customView.findViewById<EditText>(R.id.letra6).text.toString()
-            val g = customView.findViewById<EditText>(R.id.letra7).text.toString()
-            val h = customView.findViewById<EditText>(R.id.letra8).text.toString()
-            val i = customView.findViewById<EditText>(R.id.letra9).text.toString()
 
-
-            if (viewModel.Buffarini(a,b,c,d,e,f,g,h,i)) {
+            if (viewModel.Bustos(a, b, c, d, e, f)) {
                 vistaJugadorCorrecto()
                 binding.ivN4.isVisible = false
                 binding.ivN4v.isVisible = true
@@ -235,9 +228,10 @@ class GalleryFragment4 : Fragment() {
             }
         }
     }
-    fun fontanini(){
+
+    fun franco() {
         val inflater = LayoutInflater.from(binding.root.context)
-        val customView = inflater.inflate(R.layout.descripcion_9letras, null)
+        val customView = inflater.inflate(R.layout.descripcion_6letras, null)
 
         val parent = customView.parent as? ViewGroup
         parent?.removeView(customView)
@@ -262,12 +256,8 @@ class GalleryFragment4 : Fragment() {
             val d = customView.findViewById<EditText>(R.id.letra4).text.toString()
             val e = customView.findViewById<EditText>(R.id.letra5).text.toString()
             val f = customView.findViewById<EditText>(R.id.letra6).text.toString()
-            val g = customView.findViewById<EditText>(R.id.letra7).text.toString()
-            val h = customView.findViewById<EditText>(R.id.letra8).text.toString()
-            val i = customView.findViewById<EditText>(R.id.letra9).text.toString()
 
-
-            if (viewModel.Fontanini(a,b,c,d,e,f,g,h,i)) {
+            if (viewModel.Franco(a, b, c, d, e, f)) {
                 vistaJugadorCorrecto()
                 binding.ivN2.isVisible = false
                 binding.ivN2v.isVisible = true
@@ -277,7 +267,46 @@ class GalleryFragment4 : Fragment() {
             }
         }
     }
-    fun gentiletti(){
+
+    fun silva() {
+        val inflater = LayoutInflater.from(binding.root.context)
+        val customView = inflater.inflate(R.layout.descripcion_5letras, null)
+
+        val parent = customView.parent as? ViewGroup
+        parent?.removeView(customView)
+
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(customView)
+
+        val window = dialog.window
+        window?.setLayout(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        window?.setGravity(Gravity.CENTER)
+        dialog.show()
+
+        val btnVerificar = customView.findViewById<Button>(R.id.verificar)
+
+        btnVerificar.setOnClickListener {
+            val a = customView.findViewById<EditText>(R.id.letra1).text.toString()
+            val b = customView.findViewById<EditText>(R.id.letra2).text.toString()
+            val c = customView.findViewById<EditText>(R.id.letra3).text.toString()
+            val d = customView.findViewById<EditText>(R.id.letra4).text.toString()
+            val e = customView.findViewById<EditText>(R.id.letra5).text.toString()
+
+            if (viewModel.Silva(a, b, c, d, e)) {
+                vistaJugadorCorrecto()
+                binding.ivN6.isVisible = false
+                binding.ivN6v.isVisible = true
+                dialog.dismiss()
+            } else {
+                vistaJugadorIncorrecto()
+            }
+        }
+    }
+
+    fun tagliafico() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.descripcion_10letras, null)
 
@@ -311,45 +340,7 @@ class GalleryFragment4 : Fragment() {
 
 
 
-            if (viewModel.Gentiletti(a,b,c,d,e,f,g,h,i,j)) {
-                vistaJugadorCorrecto()
-                binding.ivN6.isVisible = false
-                binding.ivN6v.isVisible = true
-                dialog.dismiss()
-            } else {
-                vistaJugadorIncorrecto()
-            }
-        }
-
-    }
-    fun mas(){
-        val inflater = LayoutInflater.from(binding.root.context)
-        val customView = inflater.inflate(R.layout.descripcion_3letras, null)
-
-        val parent = customView.parent as? ViewGroup
-        parent?.removeView(customView)
-
-        val dialog = Dialog(requireContext())
-        dialog.setContentView(customView)
-
-        val window = dialog.window
-        window?.setLayout(
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT
-        )
-        window?.setGravity(Gravity.CENTER)
-        dialog.show()
-
-        val btnVerificar = customView.findViewById<Button>(R.id.verificar)
-
-        btnVerificar.setOnClickListener {
-            val a = customView.findViewById<EditText>(R.id.letra1).text.toString()
-            val b = customView.findViewById<EditText>(R.id.letra2).text.toString()
-            val c = customView.findViewById<EditText>(R.id.letra3).text.toString()
-
-
-
-            if (viewModel.Mas(a,b,c)) {
+            if (viewModel.Tagliafico(a, b, c, d, e, f,g,h,i,j)) {
                 vistaJugadorCorrecto()
                 binding.ivN3.isVisible = false
                 binding.ivN3v.isVisible = true
@@ -359,172 +350,8 @@ class GalleryFragment4 : Fragment() {
             }
         }
     }
-    fun villalba(){
-        val inflater = LayoutInflater.from(binding.root.context)
-        val customView = inflater.inflate(R.layout.descripcion_8letras, null)
 
-        val parent = customView.parent as? ViewGroup
-        parent?.removeView(customView)
-
-        val dialog = Dialog(requireContext())
-        dialog.setContentView(customView)
-
-        val window = dialog.window
-        window?.setLayout(
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT
-        )
-        window?.setGravity(Gravity.CENTER)
-        dialog.show()
-
-        val btnVerificar = customView.findViewById<Button>(R.id.verificar)
-
-        btnVerificar.setOnClickListener {
-            val a = customView.findViewById<EditText>(R.id.letra1).text.toString()
-            val b = customView.findViewById<EditText>(R.id.letra2).text.toString()
-            val c = customView.findViewById<EditText>(R.id.letra3).text.toString()
-            val d = customView.findViewById<EditText>(R.id.letra4).text.toString()
-            val e = customView.findViewById<EditText>(R.id.letra5).text.toString()
-            val f = customView.findViewById<EditText>(R.id.letra6).text.toString()
-            val g = customView.findViewById<EditText>(R.id.letra7).text.toString()
-            val h = customView.findViewById<EditText>(R.id.letra8).text.toString()
-
-
-
-            if (viewModel.Villalba(a,b,c,d,e,f,g,h)) {
-                vistaJugadorCorrecto()
-                binding.ivN8.isVisible = false
-                binding.ivN8v.isVisible = true
-                dialog.dismiss()
-            } else {
-                vistaJugadorIncorrecto()
-            }
-        }
-    }
-    fun mercier(){
-        val inflater = LayoutInflater.from(binding.root.context)
-        val customView = inflater.inflate(R.layout.descripcion_7letras, null)
-
-        val parent = customView.parent as? ViewGroup
-        parent?.removeView(customView)
-
-        val dialog = Dialog(requireContext())
-        dialog.setContentView(customView)
-
-        val window = dialog.window
-        window?.setLayout(
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT
-        )
-        window?.setGravity(Gravity.CENTER)
-        dialog.show()
-
-        val btnVerificar = customView.findViewById<Button>(R.id.verificar)
-
-        btnVerificar.setOnClickListener {
-            val a = customView.findViewById<EditText>(R.id.letra1).text.toString()
-            val b = customView.findViewById<EditText>(R.id.letra2).text.toString()
-            val c = customView.findViewById<EditText>(R.id.letra3).text.toString()
-            val d = customView.findViewById<EditText>(R.id.letra4).text.toString()
-            val e = customView.findViewById<EditText>(R.id.letra5).text.toString()
-            val f = customView.findViewById<EditText>(R.id.letra6).text.toString()
-            val g = customView.findViewById<EditText>(R.id.letra7).text.toString()
-
-
-
-            if (viewModel.Mercier(a,b,c,d,e,f,g)) {
-                vistaJugadorCorrecto()
-                binding.ivN11.isVisible = false
-                binding.ivN11v.isVisible = true
-                dialog.dismiss()
-            } else {
-                vistaJugadorIncorrecto()
-            }
-        }
-    }
-    fun ortigoza(){
-        val inflater = LayoutInflater.from(binding.root.context)
-        val customView = inflater.inflate(R.layout.descripcion_8letras, null)
-
-        val parent = customView.parent as? ViewGroup
-        parent?.removeView(customView)
-
-        val dialog = Dialog(requireContext())
-        dialog.setContentView(customView)
-
-        val window = dialog.window
-        window?.setLayout(
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT
-        )
-        window?.setGravity(Gravity.CENTER)
-        dialog.show()
-
-        val btnVerificar = customView.findViewById<Button>(R.id.verificar)
-
-        btnVerificar.setOnClickListener {
-            val a = customView.findViewById<EditText>(R.id.letra1).text.toString()
-            val b = customView.findViewById<EditText>(R.id.letra2).text.toString()
-            val c = customView.findViewById<EditText>(R.id.letra3).text.toString()
-            val d = customView.findViewById<EditText>(R.id.letra4).text.toString()
-            val e = customView.findViewById<EditText>(R.id.letra5).text.toString()
-            val f = customView.findViewById<EditText>(R.id.letra6).text.toString()
-            val g = customView.findViewById<EditText>(R.id.letra7).text.toString()
-            val h = customView.findViewById<EditText>(R.id.letra8).text.toString()
-
-
-
-            if (viewModel.Ortigoza(a,b,c,d,e,f,g,h)) {
-                vistaJugadorCorrecto()
-                binding.ivN5.isVisible = false
-                binding.ivN5v.isVisible = true
-                dialog.dismiss()
-            } else {
-                vistaJugadorIncorrecto()
-            }
-        }
-    }
-    fun piatti(){
-        val inflater = LayoutInflater.from(binding.root.context)
-        val customView = inflater.inflate(R.layout.descripcion_6letras, null)
-
-        val parent = customView.parent as? ViewGroup
-        parent?.removeView(customView)
-
-        val dialog = Dialog(requireContext())
-        dialog.setContentView(customView)
-
-        val window = dialog.window
-        window?.setLayout(
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT
-        )
-        window?.setGravity(Gravity.CENTER)
-        dialog.show()
-
-        val btnVerificar = customView.findViewById<Button>(R.id.verificar)
-
-        btnVerificar.setOnClickListener {
-            val a = customView.findViewById<EditText>(R.id.letra1).text.toString()
-            val b = customView.findViewById<EditText>(R.id.letra2).text.toString()
-            val c = customView.findViewById<EditText>(R.id.letra3).text.toString()
-            val d = customView.findViewById<EditText>(R.id.letra4).text.toString()
-            val e = customView.findViewById<EditText>(R.id.letra5).text.toString()
-            val f = customView.findViewById<EditText>(R.id.letra6).text.toString()
-
-
-
-            if (viewModel.Piatti(a,b,c,d,e,f)) {
-                vistaJugadorCorrecto()
-                binding.ivN7.isVisible = false
-                binding.ivN7v.isVisible = true
-                dialog.dismiss()
-            } else {
-                vistaJugadorIncorrecto()
-            }
-        }
-    }
-    fun romagnoli(){
+    fun rodriguez() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.descripcion_9letras, null)
 
@@ -557,17 +384,101 @@ class GalleryFragment4 : Fragment() {
 
 
 
-            if (viewModel.Romagnoli(a,b,c,d,e,f,g,h,i)) {
+            if (viewModel.Rodriguez(a, b, c, d, e, f,g,h,i)) {
                 vistaJugadorCorrecto()
-                binding.ivN10.isVisible = false
-                binding.ivN10v.isVisible = true
+                binding.ivN8.isVisible = false
+                binding.ivN8v.isVisible = true
+                dialog.dismiss()
+            } else {
+                vistaJugadorIncorrecto()
+            }
+        }
+
+    }
+    fun sanchezmino() {
+        val inflater = LayoutInflater.from(binding.root.context)
+        val customView = inflater.inflate(R.layout.sanchez_mino, null)
+
+        val parent = customView.parent as? ViewGroup
+        parent?.removeView(customView)
+
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(customView)
+
+        val window = dialog.window
+        window?.setLayout(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        window?.setGravity(Gravity.CENTER)
+        dialog.show()
+
+        val btnVerificar = customView.findViewById<Button>(R.id.verificar)
+
+        btnVerificar.setOnClickListener {
+            val a = customView.findViewById<EditText>(R.id.letra1).text.toString()
+            val b = customView.findViewById<EditText>(R.id.letra2).text.toString()
+            val c = customView.findViewById<EditText>(R.id.letra3).text.toString()
+            val d = customView.findViewById<EditText>(R.id.letra4).text.toString()
+            val e = customView.findViewById<EditText>(R.id.letra5).text.toString()
+            val f = customView.findViewById<EditText>(R.id.letra6).text.toString()
+            val g = customView.findViewById<EditText>(R.id.letra7).text.toString()
+            val h = customView.findViewById<EditText>(R.id.letra8).text.toString()
+            val i = customView.findViewById<EditText>(R.id.letra9).text.toString()
+            val j = customView.findViewById<EditText>(R.id.letra10).text.toString()
+            val k = customView.findViewById<EditText>(R.id.letra11).text.toString()
+
+
+
+
+            if (viewModel.SanchezMino(a, b, c, d, e, f,g,h,i,j,k)) {
+                vistaJugadorCorrecto()
+                binding.ivN5.isVisible = false
+                binding.ivN5v.isVisible = true
                 dialog.dismiss()
             } else {
                 vistaJugadorIncorrecto()
             }
         }
     }
-    fun matos(){
+    fun meza() {
+        val inflater = LayoutInflater.from(binding.root.context)
+        val customView = inflater.inflate(R.layout.descripcion_4letras, null)
+
+        val parent = customView.parent as? ViewGroup
+        parent?.removeView(customView)
+
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(customView)
+
+        val window = dialog.window
+        window?.setLayout(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        window?.setGravity(Gravity.CENTER)
+        dialog.show()
+
+        val btnVerificar = customView.findViewById<Button>(R.id.verificar)
+
+        btnVerificar.setOnClickListener {
+            val a = customView.findViewById<EditText>(R.id.letra1).text.toString()
+            val b = customView.findViewById<EditText>(R.id.letra2).text.toString()
+            val c = customView.findViewById<EditText>(R.id.letra3).text.toString()
+            val d = customView.findViewById<EditText>(R.id.letra4).text.toString()
+
+            if (viewModel.Meza(a, b, c, d)) {
+                vistaJugadorCorrecto()
+                binding.ivN11.isVisible = false
+                binding.ivN11v.isVisible = true
+                dialog.dismiss()
+            } else {
+                vistaJugadorIncorrecto()
+            }
+        }
+
+    }
+    fun barco() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.descripcion_5letras, null)
 
@@ -596,7 +507,91 @@ class GalleryFragment4 : Fragment() {
 
 
 
-            if (viewModel.Matos(a,b,c,d,e)) {
+            if (viewModel.Barco(a, b, c, d, e)) {
+                vistaJugadorCorrecto()
+                binding.ivN10.isVisible = false
+                binding.ivN10v.isVisible = true
+                dialog.dismiss()
+            } else {
+                vistaJugadorIncorrecto()
+            }
+        }
+    }
+    fun benitez() {
+        val inflater = LayoutInflater.from(binding.root.context)
+        val customView = inflater.inflate(R.layout.descripcion_7letras, null)
+
+        val parent = customView.parent as? ViewGroup
+        parent?.removeView(customView)
+
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(customView)
+
+        val window = dialog.window
+        window?.setLayout(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        window?.setGravity(Gravity.CENTER)
+        dialog.show()
+
+        val btnVerificar = customView.findViewById<Button>(R.id.verificar)
+
+        btnVerificar.setOnClickListener {
+            val a = customView.findViewById<EditText>(R.id.letra1).text.toString()
+            val b = customView.findViewById<EditText>(R.id.letra2).text.toString()
+            val c = customView.findViewById<EditText>(R.id.letra3).text.toString()
+            val d = customView.findViewById<EditText>(R.id.letra4).text.toString()
+            val e = customView.findViewById<EditText>(R.id.letra5).text.toString()
+            val f = customView.findViewById<EditText>(R.id.letra6).text.toString()
+            val g = customView.findViewById<EditText>(R.id.letra7).text.toString()
+
+
+
+            if (viewModel.Benitez(a, b, c, d, e, f,g)) {
+                vistaJugadorCorrecto()
+                binding.ivN7.isVisible = false
+                binding.ivN7v.isVisible = true
+                dialog.dismiss()
+            } else {
+                vistaJugadorIncorrecto()
+            }
+        }
+    }
+    fun gigliotti() {
+        val inflater = LayoutInflater.from(binding.root.context)
+        val customView = inflater.inflate(R.layout.descripcion_9letras, null)
+
+        val parent = customView.parent as? ViewGroup
+        parent?.removeView(customView)
+
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(customView)
+
+        val window = dialog.window
+        window?.setLayout(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        window?.setGravity(Gravity.CENTER)
+        dialog.show()
+
+        val btnVerificar = customView.findViewById<Button>(R.id.verificar)
+
+        btnVerificar.setOnClickListener {
+            val a = customView.findViewById<EditText>(R.id.letra1).text.toString()
+            val b = customView.findViewById<EditText>(R.id.letra2).text.toString()
+            val c = customView.findViewById<EditText>(R.id.letra3).text.toString()
+            val d = customView.findViewById<EditText>(R.id.letra4).text.toString()
+            val e = customView.findViewById<EditText>(R.id.letra5).text.toString()
+            val f = customView.findViewById<EditText>(R.id.letra6).text.toString()
+            val g = customView.findViewById<EditText>(R.id.letra7).text.toString()
+            val h = customView.findViewById<EditText>(R.id.letra8).text.toString()
+            val i = customView.findViewById<EditText>(R.id.letra9).text.toString()
+
+
+
+            if (viewModel.Gigliotti(a, b, c, d, e, f,g,h,i)) {
                 vistaJugadorCorrecto()
                 binding.ivN9.isVisible = false
                 binding.ivN9v.isVisible = true
@@ -606,5 +601,4 @@ class GalleryFragment4 : Fragment() {
             }
         }
     }
-
 }
