@@ -44,9 +44,11 @@ class GalleryFragment : Fragment() {
         _binding2 = JugadorCorrectoBinding.inflate(inflater, container, false)
         _binding3 = JugadorIncorrectoBinding.inflate(inflater, container, false)
 
+
         buttonInfo()
         jugador()
         buttonNext()
+        dialogfirst()
         val root: View = binding.root
         return root
     }
@@ -93,6 +95,39 @@ class GalleryFragment : Fragment() {
         }
     }
 
+    fun dialogfirst(){
+        val inflater = LayoutInflater.from(requireContext())
+        val customView = inflater.inflate(R.layout.match_info_1, null)
+
+        val tv1 = customView.findViewById<TextView>(R.id.tv1)
+        val tv2 = customView.findViewById<TextView>(R.id.tv2)
+        val tv3 = customView.findViewById<TextView>(R.id.tv3)
+        val tv4 = customView.findViewById<TextView>(R.id.tv4)
+
+
+        tv1.text = getString(R.string.infogallery1)
+        tv2.text = getString(R.string.infogallery2)
+        tv3.text = getString(R.string.infogallery3)
+        tv4.text = getString(R.string.infogallery4)
+
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(customView)
+
+        val window = dialog.window
+        window?.setLayout(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        window?.setGravity(Gravity.CENTER)
+
+        val btnVolver = customView.findViewById<Button>(R.id.btnVolver)
+
+        btnVolver.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
     fun jugador() {
         binding.ivArquero.setOnClickListener {saja()}
         binding.ivN4.setOnClickListener{pillud()}

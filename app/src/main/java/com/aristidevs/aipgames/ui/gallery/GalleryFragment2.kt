@@ -54,6 +54,7 @@ class GalleryFragment2 : Fragment() {
         jugador()
         buttonBack()
         buttonNext()
+        dialogfirst()
         val root: View = binding.root
         return root
     }
@@ -92,6 +93,39 @@ class GalleryFragment2 : Fragment() {
 
             dialog.show()
         }
+    }
+    fun dialogfirst(){
+        val inflater = LayoutInflater.from(requireContext())
+        val customView = inflater.inflate(R.layout.match_info_1, null)
+
+        val tv1 = customView.findViewById<TextView>(R.id.tv1)
+        val tv2 = customView.findViewById<TextView>(R.id.tv2)
+        val tv3 = customView.findViewById<TextView>(R.id.tv3)
+        val tv4 = customView.findViewById<TextView>(R.id.tv4)
+
+
+        tv1.text = getString(R.string.infogallery5)
+        tv2.text = getString(R.string.infogallery6)
+        tv3.text = getString(R.string.infogallery7)
+        tv4.text = getString(R.string.infogallery8)
+
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(customView)
+
+        val window = dialog.window
+        window?.setLayout(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        window?.setGravity(Gravity.CENTER)
+
+        val btnVolver = customView.findViewById<Button>(R.id.btnVolver)
+
+        btnVolver.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
     }
     fun vistaJugadorIncorrecto() {
         val inflater = LayoutInflater.from(binding.root.context)

@@ -97,7 +97,8 @@
 
             <EditText
                 android:id="@+id/letra6"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:inputType="textCapCharacters"
@@ -105,7 +106,8 @@
                 android:textSize="40sp" />
             <EditText
                 android:id="@+id/letra7"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:inputType="textCapCharacters"
@@ -113,43 +115,44 @@
                 android:textSize="40sp" />
             <EditText
                 android:id="@+id/letra8"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:inputType="textCapCharacters"
                 android:maxLength="1"
                 android:textSize="40sp" />
-
             <EditText
                 android:id="@+id/letra9"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:inputType="textCapCharacters"
                 android:maxLength="1"
                 android:textSize="40sp" />
-
             <EditText
                 android:id="@+id/letra10"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:inputType="textCapCharacters"
                 android:maxLength="1"
                 android:textSize="40sp" />
-
             <EditText
                 android:id="@+id/letra11"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:inputType="textCapCharacters"
                 android:maxLength="1"
                 android:textSize="40sp" />
-
             <EditText
                 android:id="@+id/letra12"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:inputType="textCapCharacters"
@@ -157,7 +160,8 @@
                 android:textSize="40sp" />
             <EditText
                 android:id="@+id/letra13"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:inputType="textCapCharacters"
@@ -165,7 +169,8 @@
                 android:textSize="40sp" />
             <EditText
                 android:id="@+id/letra14"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:inputType="textCapCharacters"

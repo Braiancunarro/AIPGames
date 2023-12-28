@@ -49,9 +49,44 @@ class GalleryFragment5 : Fragment() {
         buttonInfo()
         buttonback()
         jugador()
+        dialogFirst()
 
         val root: View = binding.root
         return root
+    }
+
+    private fun dialogFirst() {
+        val inflater = LayoutInflater.from(requireContext())
+        val customView = inflater.inflate(R.layout.match_info_1, null)
+
+        val tv1 = customView.findViewById<TextView>(R.id.tv1)
+        val tv2 = customView.findViewById<TextView>(R.id.tv2)
+        val tv3 = customView.findViewById<TextView>(R.id.tv3)
+        val tv4 = customView.findViewById<TextView>(R.id.tv4)
+
+
+        tv1.text = getString(R.string.infogallery17)
+        tv2.text = getString(R.string.infogallery18)
+        tv3.text = getString(R.string.infogallery19)
+        tv4.text = getString(R.string.infogallery20)
+
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(customView)
+
+        val window = dialog.window
+        window?.setLayout(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        window?.setGravity(Gravity.CENTER)
+
+        val btnVolver = customView.findViewById<Button>(R.id.btnVolver)
+
+        btnVolver.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
     }
 
     fun buttonInfo() {
@@ -340,7 +375,7 @@ class GalleryFragment5 : Fragment() {
 
 
 
-            if (viewModel.Tagliafico(a, b, c, d, e, f,g,h,i,j)) {
+            if (viewModel.Tagliafico(a, b, c, d, e, f, g, h, i, j)) {
                 vistaJugadorCorrecto()
                 binding.ivN3.isVisible = false
                 binding.ivN3v.isVisible = true
@@ -384,7 +419,7 @@ class GalleryFragment5 : Fragment() {
 
 
 
-            if (viewModel.Rodriguez(a, b, c, d, e, f,g,h,i)) {
+            if (viewModel.Rodriguez(a, b, c, d, e, f, g, h, i)) {
                 vistaJugadorCorrecto()
                 binding.ivN8.isVisible = false
                 binding.ivN8v.isVisible = true
@@ -395,6 +430,7 @@ class GalleryFragment5 : Fragment() {
         }
 
     }
+
     fun sanchezmino() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.sanchez_mino, null)
@@ -431,7 +467,7 @@ class GalleryFragment5 : Fragment() {
 
 
 
-            if (viewModel.SanchezMino(a, b, c, d, e, f,g,h,i,j,k)) {
+            if (viewModel.SanchezMino(a, b, c, d, e, f, g, h, i, j, k)) {
                 vistaJugadorCorrecto()
                 binding.ivN5.isVisible = false
                 binding.ivN5v.isVisible = true
@@ -441,6 +477,7 @@ class GalleryFragment5 : Fragment() {
             }
         }
     }
+
     fun meza() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.descripcion_4letras, null)
@@ -460,14 +497,13 @@ class GalleryFragment5 : Fragment() {
         dialog.show()
 
         val btnVerificar = customView.findViewById<Button>(R.id.verificar)
-
         btnVerificar.setOnClickListener {
             val a = customView.findViewById<EditText>(R.id.letra1).text.toString()
             val b = customView.findViewById<EditText>(R.id.letra2).text.toString()
             val c = customView.findViewById<EditText>(R.id.letra3).text.toString()
             val d = customView.findViewById<EditText>(R.id.letra4).text.toString()
 
-            if (viewModel.Meza(a, b, c, d)) {
+            if (viewModel.Meza(a,b,c,d)) {
                 vistaJugadorCorrecto()
                 binding.ivN11.isVisible = false
                 binding.ivN11v.isVisible = true
@@ -476,8 +512,8 @@ class GalleryFragment5 : Fragment() {
                 vistaJugadorIncorrecto()
             }
         }
-
     }
+
     fun barco() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.descripcion_5letras, null)
@@ -517,6 +553,7 @@ class GalleryFragment5 : Fragment() {
             }
         }
     }
+
     fun benitez() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.descripcion_7letras, null)
@@ -548,7 +585,7 @@ class GalleryFragment5 : Fragment() {
 
 
 
-            if (viewModel.Benitez(a, b, c, d, e, f,g)) {
+            if (viewModel.Benitez(a, b, c, d, e, f, g)) {
                 vistaJugadorCorrecto()
                 binding.ivN7.isVisible = false
                 binding.ivN7v.isVisible = true
@@ -558,6 +595,7 @@ class GalleryFragment5 : Fragment() {
             }
         }
     }
+
     fun gigliotti() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.descripcion_9letras, null)
@@ -591,7 +629,7 @@ class GalleryFragment5 : Fragment() {
 
 
 
-            if (viewModel.Gigliotti(a, b, c, d, e, f,g,h,i)) {
+            if (viewModel.Gigliotti(a, b, c, d, e, f, g, h, i)) {
                 vistaJugadorCorrecto()
                 binding.ivN9.isVisible = false
                 binding.ivN9v.isVisible = true
@@ -601,4 +639,5 @@ class GalleryFragment5 : Fragment() {
             }
         }
     }
+
 }

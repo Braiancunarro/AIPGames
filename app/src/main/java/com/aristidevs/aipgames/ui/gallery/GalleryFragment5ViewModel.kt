@@ -1,8 +1,10 @@
 package com.aristidevs.aipgames.ui.gallery
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import com.aristidevs.aipgames.ui.slideshow.Jugadores
 
-class GalleryFragment5ViewModel : ViewModel() {
+class GalleryFragment5ViewModel : ViewModel(){
 
     fun Campana(c: String, a: String, m: String, p: String, a2: String, n: String, a3: String): Boolean {
         return c.equals("C", ignoreCase = true) &&
