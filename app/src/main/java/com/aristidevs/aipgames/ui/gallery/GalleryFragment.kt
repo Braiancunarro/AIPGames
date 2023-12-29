@@ -2,7 +2,6 @@ package com.aristidevs.aipgames.ui.gallery
 
 import android.annotation.SuppressLint
 import android.app.Dialog
-import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -15,7 +14,9 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.aristidevs.aipgames.MiAplicacion.Companion.database
 import com.aristidevs.aipgames.R
+import com.aristidevs.aipgames.data.EstadoJugador
 import com.aristidevs.aipgames.databinding.FragmentGalleryBinding
 import com.aristidevs.aipgames.databinding.JugadorCorrectoBinding
 import com.aristidevs.aipgames.databinding.JugadorIncorrectoBinding
@@ -53,11 +54,12 @@ class GalleryFragment : Fragment() {
         return root
     }
 
-    fun buttonNext(){
-        binding.buttonNext.setOnClickListener{
-         findNavController().navigate(R.id.action_nav_gallery_to_galleryFragment2)
+    fun buttonNext() {
+        binding.buttonNext.setOnClickListener {
+            findNavController().navigate(R.id.action_nav_gallery_to_galleryFragment2)
         }
     }
+
     fun buttonInfo() {
 
         binding.buttonInfo.setOnClickListener {
@@ -95,7 +97,7 @@ class GalleryFragment : Fragment() {
         }
     }
 
-    fun dialogfirst(){
+    fun dialogfirst() {
         val inflater = LayoutInflater.from(requireContext())
         val customView = inflater.inflate(R.layout.match_info_1, null)
 
@@ -128,11 +130,12 @@ class GalleryFragment : Fragment() {
 
         dialog.show()
     }
+
     fun jugador() {
-        binding.ivArquero.setOnClickListener {saja()}
-        binding.ivN4.setOnClickListener{pillud()}
-        binding.ivN2.setOnClickListener{lollo()}
-        binding.ivN6.setOnClickListener {cabral()}
+        binding.ivArquero.setOnClickListener { saja() }
+        binding.ivN4.setOnClickListener { pillud() }
+        binding.ivN2.setOnClickListener { lollo() }
+        binding.ivN6.setOnClickListener { cabral() }
         binding.ivN3.setOnClickListener { grimi() }
         binding.ivN5.setOnClickListener { videla() }
         binding.ivN8.setOnClickListener { aued() }
@@ -214,11 +217,11 @@ class GalleryFragment : Fragment() {
                 binding.ivArquero.isVisible = false
                 binding.ivCheck1.isVisible = true
                 dialog.dismiss()
+
             } else {
                 vistaJugadorIncorrecto()
             }
         }
-
     }
     @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
     fun pillud() {
@@ -260,7 +263,6 @@ class GalleryFragment : Fragment() {
         }
 
     }
-
     @SuppressLint("MissingInflatedId")
     fun lollo() {
         val inflater = LayoutInflater.from(binding.root.context)
@@ -300,7 +302,6 @@ class GalleryFragment : Fragment() {
         }
 
     }
-
     @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
     fun cabral() {
         val inflater = LayoutInflater.from(binding.root.context)
@@ -330,7 +331,7 @@ class GalleryFragment : Fragment() {
             val a2 = customView.findViewById<EditText>(R.id.letra5).text.toString()
             val l = customView.findViewById<EditText>(R.id.letra6).text.toString()
 
-            if (galleryViewModel.Cabral(c,a1,b,r,a2,l)) {
+            if (galleryViewModel.Cabral(c, a1, b, r, a2, l)) {
                 vistaJugadorCorrecto()
                 binding.ivN6.isVisible = false
                 binding.ivN6v.isVisible = true
@@ -341,7 +342,6 @@ class GalleryFragment : Fragment() {
         }
 
     }
-
     fun grimi() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.descripcion_5letras, null)
@@ -369,7 +369,7 @@ class GalleryFragment : Fragment() {
             val m = customView.findViewById<EditText>(R.id.letra4).text.toString()
             val i2 = customView.findViewById<EditText>(R.id.letra5).text.toString()
 
-            if (galleryViewModel.Grimi(g,r,i1,m,i2)) {
+            if (galleryViewModel.Grimi(g, r, i1, m, i2)) {
                 vistaJugadorCorrecto()
                 binding.ivN3.isVisible = false
                 binding.ivN3v.isVisible = true
@@ -380,7 +380,6 @@ class GalleryFragment : Fragment() {
         }
 
     }
-
     fun videla() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.descripcion_6letras, null)
@@ -409,7 +408,7 @@ class GalleryFragment : Fragment() {
             val l = customView.findViewById<EditText>(R.id.letra5).text.toString()
             val a = customView.findViewById<EditText>(R.id.letra6).text.toString()
 
-            if (galleryViewModel.Videla(v,i,d,e,l,a)) {
+            if (galleryViewModel.Videla(v, i, d, e, l, a)) {
                 vistaJugadorCorrecto()
                 binding.ivN5.isVisible = false
                 binding.ivN5v.isVisible = true
@@ -420,7 +419,6 @@ class GalleryFragment : Fragment() {
         }
 
     }
-
     @SuppressLint("SuspiciousIndentation")
     fun aued() {
         val inflater = LayoutInflater.from(binding.root.context)
@@ -448,7 +446,7 @@ class GalleryFragment : Fragment() {
             val e = customView.findViewById<EditText>(R.id.letra3).text.toString()
             val d = customView.findViewById<EditText>(R.id.letra4).text.toString()
 
-            if (galleryViewModel.Aued(a,u,e,d)) {
+            if (galleryViewModel.Aued(a, u, e, d)) {
                 vistaJugadorCorrecto()
                 binding.ivN8.isVisible = false
                 binding.ivN8v.isVisible = true
@@ -459,7 +457,6 @@ class GalleryFragment : Fragment() {
         }
 
     }
-
     @SuppressLint("SuspiciousIndentation")
     fun diaz() {
         val inflater = LayoutInflater.from(binding.root.context)
@@ -487,7 +484,7 @@ class GalleryFragment : Fragment() {
             val a = customView.findViewById<EditText>(R.id.letra3).text.toString()
             val z = customView.findViewById<EditText>(R.id.letra4).text.toString()
 
-            if (galleryViewModel.Diaz(d,i,a,z)) {
+            if (galleryViewModel.Diaz(d, i, a, z)) {
                 vistaJugadorCorrecto()
                 binding.ivN11.isVisible = false
                 binding.ivN11v.isVisible = true
@@ -498,7 +495,6 @@ class GalleryFragment : Fragment() {
         }
 
     }
-
     fun centurion() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.descripcion_9letras, null)
@@ -530,7 +526,7 @@ class GalleryFragment : Fragment() {
             val o = customView.findViewById<EditText>(R.id.letra8).text.toString()
             val n2 = customView.findViewById<EditText>(R.id.letra9).text.toString()
 
-            if (galleryViewModel.Centurion(c,e,n1,t,u,r,i,o,n2)) {
+            if (galleryViewModel.Centurion(c, e, n1, t, u, r, i, o, n2)) {
                 vistaJugadorCorrecto()
                 binding.ivN10.isVisible = false
                 binding.ivN10v.isVisible = true
@@ -541,7 +537,6 @@ class GalleryFragment : Fragment() {
         }
 
     }
-
     @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
     fun bou() {
         val inflater = LayoutInflater.from(binding.root.context)
@@ -569,7 +564,7 @@ class GalleryFragment : Fragment() {
             val u = customView.findViewById<EditText>(R.id.letra3).text.toString()
 
 
-            if (galleryViewModel.Bou(b,o,u)) {
+            if (galleryViewModel.Bou(b, o, u)) {
                 vistaJugadorCorrecto()
                 binding.ivN7.isVisible = false
                 binding.ivN7v.isVisible = true
@@ -580,7 +575,6 @@ class GalleryFragment : Fragment() {
         }
 
     }
-
     fun milito() {
         val inflater = LayoutInflater.from(binding.root.context)
         val customView = inflater.inflate(R.layout.descripcion_6letras, null)
@@ -609,7 +603,7 @@ class GalleryFragment : Fragment() {
             val t = customView.findViewById<EditText>(R.id.letra5).text.toString()
             val o = customView.findViewById<EditText>(R.id.letra6).text.toString()
 
-            if (galleryViewModel.Milito(m,i1,l,i2,t,o)) {
+            if (galleryViewModel.Milito(m, i1, l, i2, t, o)) {
                 vistaJugadorCorrecto()
                 binding.ivN9.isVisible = false
                 binding.ivN9v.isVisible = true
@@ -619,6 +613,19 @@ class GalleryFragment : Fragment() {
             }
         }
 
+    }
+
+
+//esta llamada todavia no funciona, es para almacenar los datos cuando navegamos entre fragment.
+    suspend fun check(){
+        val estadoJugador = EstadoJugador("saja", "SAJA", true)
+        database.estadoJugadorDao().insertEstadoJugador(estadoJugador)
+
+        val estadoRecuperado = database.estadoJugadorDao().getEstadoJugador("saja")
+        if (estadoRecuperado != null && estadoRecuperado.estaHecho){
+            binding.ivArquero.isVisible = false
+            binding.ivCheck1.isVisible = true
+        }
     }
 
     override fun onDestroyView() {

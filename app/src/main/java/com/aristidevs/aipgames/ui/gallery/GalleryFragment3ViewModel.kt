@@ -48,7 +48,12 @@ class GalleryFragment3ViewModel : ViewModel() {
         e: String,
         z: String
     ): Boolean {
-        return r.equals("R", ignoreCase = true) &&
+        return m.equals("M", ignoreCase = true)&&
+                o1.equals("O", ignoreCase = true)&&
+                r3.equals("R", ignoreCase = true)&&
+                e1.equals("E", ignoreCase = true)&&
+                l.equals("L", ignoreCase = true)&&
+                r.equals("R", ignoreCase = true) &&
                 o.equals("O", ignoreCase = true) &&
                 d.equals("D", ignoreCase = true) &&
                 r2.equals("R", ignoreCase = true) &&
